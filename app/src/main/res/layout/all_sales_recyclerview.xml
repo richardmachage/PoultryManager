@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/text_view_outlook_pressed"
+    android:layout_margin="5dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_alignParentTop="true"
+        android:background="@drawable/text_view_outlook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saleId_allSalesRecyclclerTextview"
+        android:textAlignment="center"
+        android:text="Sale Id: "
+        android:textColor="@color/design_default_color_primary_variant"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buyerName_allSalesRecyclclerTextview"
+        android:layout_width="match_parent"
+        android:layout_below="@id/saleId_allSalesRecyclclerTextview"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="Buyer Name:  "
+        android:padding="5dp"
+        android:textColor="@color/design_default_color_on_primary"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/traySold_allSalesRecyclclerTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="Trays Sold: "
+        android:layout_below="@id/buyerName_allSalesRecyclclerTextview"
+        android:padding="5dp"
+        android:textColor="@color/design_default_color_on_primary"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pricePerTray_allSalesRecyclclerTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="Price per Tray: "
+        android:layout_below="@id/traySold_allSalesRecyclclerTextview"
+        android:padding="5dp"
+        android:textColor="@color/design_default_color_on_primary"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/price_allSalesRecyclclerTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="Price Sold: "
+        android:layout_below="@id/pricePerTray_allSalesRecyclclerTextview"
+        android:padding="5dp"
+        android:textColor="@color/design_default_color_on_primary"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Eggs.setEggReminderActivity"
+    android:background="@drawable/text_view_outlook"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/showTimeReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/text_view_outlook"
+        android:padding="10dp"
+        android:text="08 : 45 PM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/selectTimeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showTimeReminder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/small_buttons"
+        android:padding="10dp"
+        android:text="select time"
+        android:textSize="26sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/setAlarmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectTimeButton"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/small_buttons"
+        android:padding="10dp"
+        android:text="set alarm"
+        android:textSize="26sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelAlarmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setAlarmButton"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/small_buttons"
+        android:padding="10dp"
+        android:text="cancel Alarm"
+        android:textSize="26sp" />
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Eggs.EggsFragment"
+    android:background="@color/design_default_color_on_primary">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputDateEggs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/text_view_outlook"
+        android:hint="Date"
+        android:textSize="28sp"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textColorHint="@color/design_default_color_primary" />
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/calenderImageButtonEggs"
+        android:layout_alignTop="@id/inputDateEggs"
+        android:layout_alignBottom="@+id/inputDateEggs"
+        android:layout_alignEnd="@id/inputDateEggs"
+        android:src="@drawable/ic_calender"
+        android:padding="5dp"
+        android:background="@drawable/text_view_outlook"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputEggsCollected"
+        android:background="@drawable/text_view_outlook"
+        android:layout_below="@id/inputDateEggs"
+        android:hint="Eggs Collected"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:textColorHint="@color/design_default_color_primary"
+        android:inputType="number"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/showEggsCollected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputEggsCollected"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/my_cards_outlook"
+        android:padding="10dp"
+        android:text="TRAYS : 0\n\n EGGS : 0"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="25sp" />
+<androidx.appcompat.widget.AppCompatButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/saveEggCollection"
+    android:background="@drawable/text_view_outlook_click_effect"
+    android:layout_below="@id/showEggsCollected"
+    android:layout_margin="10dp"
+    android:text="SAVE RECORD"
+    android:textColor="@color/design_default_color_on_primary"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/saveEggCollection"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/text_view_outlook">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/recentEggCollectionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Recent Records"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentEggRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp" />
+
+    </LinearLayout>
+</RelativeLayout>

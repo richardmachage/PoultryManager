@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1082048859478",
+    "project_id": "poultry-manager-20fa2",
+    "storage_bucket": "poultry-manager-20fa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082048859478:android:0f46751624ef1da5b79af7",
+        "android_client_info": {
+          "package_name": "com.example.poultrymanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082048859478-njcevebojeiis9vg6fh7291dll4jjped.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjkDXuFLkSFA6SpUNwUbeV494oJDZ-FSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082048859478-njcevebojeiis9vg6fh7291dll4jjped.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

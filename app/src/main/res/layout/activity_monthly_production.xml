@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="5dp"
+    tools:context=".Home.MonthlyProduction">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_view_outlook"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/monthandyearLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_buttons"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/inputCageNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cage"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_primary" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/inputCageNumberSpinner"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/cages"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_primary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_buttons"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/inputCellNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cell"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_primary" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/inputCellNumberSpinner"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/cells"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_primary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_buttons"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/inputMonthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Month"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_primary" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/inputMonthsSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/months"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_primary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_buttons"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/inputYearTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_primary" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/inputYearSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/anotherYears"
+                android:padding="5dp"
+                android:textColor="@color/design_default_color_on_primary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plotChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monthandyearLinearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/text_view_outlook_click_effect"
+            android:padding="10dp"
+            android:text="plot"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <!--<androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pieChartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plotChart"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Pie Chart :"
+            android:theme="@style/Theme.Material3.Light" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/monthlyProducePiechart"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/pieChartTitle"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp" />
+-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/barChartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plotChart"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Bar Chart :"
+            android:theme="@style/Theme.Material3.Light" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/monthlyProduceBarchart"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@id/barChartTitle"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lineChartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monthlyProduceBarchart"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Line Chart :"
+            android:theme="@style/Theme.Material3.Light" />
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/monthlyProduceLinechart"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@id/lineChartTitle"
+            android:layout_marginBottom="10dp" />
+    </RelativeLayout>
+</ScrollView>

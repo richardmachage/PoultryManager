@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/text_view_outlook_pressed">
+
+    <LinearLayout
+        android:id="@+id/liniearLayout_recenteggsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_view_outlook_pressed"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/date_AllFeedsRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Date :"
+            android:textSize="15dp"
+            android:textColor="@color/design_default_color_on_primary" />
+
+        <TextView
+            android:id="@+id/numOfSacks_AllFeedsRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textSize="15dp"
+            android:text="Sacks of Feeds : "
+            android:textColor="@color/design_default_color_on_primary" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

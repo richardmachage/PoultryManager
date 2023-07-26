@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feeds.FeedsFragment"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:background="@color/design_default_color_on_primary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sacksUsedRelativeLayout"
+            android:background="@drawable/text_view_outlook">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sacksOfFeedsUsedTextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="Sacks of Feeds Used :"
+                android:textColor="@color/design_default_color_primary" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputdateFeeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sacksOfFeedsUsedTextview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/text_view_outlook"
+                android:hint="Date"
+                android:inputType="date"
+                android:padding="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/design_default_color_primary"
+                android:textColorHint="@color/design_default_color_primary" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:background="@drawable/text_view_outlook"
+                android:id="@+id/calenderImageButtonFeeds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/inputdateFeeds"
+                android:layout_alignEnd="@id/inputdateFeeds"
+                android:padding="5dp"
+                android:src="@drawable/ic_calender" />
+
+            <EditText
+                android:id="@+id/inputNumOfSacks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inputdateFeeds"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/text_view_outlook"
+                android:hint="Number of Sacks"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:textColor="@color/design_default_color_primary"
+                android:textColorHint="@color/design_default_color_primary" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveFeedsButton"
+                android:background="@drawable/text_view_outlook_click_effect"
+                android:text="Save"
+                android:textColor="@color/design_default_color_on_primary"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_below="@+id/inputNumOfSacks"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/feedingTrendsRelativeLayout"
+            android:background="@drawable/text_view_outlook"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/feedingTrendsTextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                android:text="Feeding Trends :"
+                android:textColor="@color/design_default_color_primary" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feedingTrendsTextview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/feedsMonthlyTrendButton"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="MONTHLY"
+                    android:textColor="@color/design_default_color_on_primary"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/feedsQuarterlyTrendButton"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="Quarter"
+                    android:textColor="@color/design_default_color_on_primary"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/feedsYearlyTrendButton"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="Yearly"
+                    android:textColor="@color/design_default_color_on_primary"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/text_view_outlook"
+            android:layout_margin="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recentFeedsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="Recent Feeding :"
+                android:textColor="@color/design_default_color_primary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recentFeedsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/recentFeedsViewAllButton"
+                android:layout_below="@id/recentFeedsTextView"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/text_view_outlook"
+                android:padding="10dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recentFeedsViewAllButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:textColor="@color/design_default_color_on_primary"
+                android:background="@drawable/text_view_outlook_click_effect"
+                android:text="VIEW ALL" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>

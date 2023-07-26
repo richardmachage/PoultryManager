@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/small_buttons"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cellNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cell Number: "
+        android:layout_marginRight="10dp"
+        android:textColor="@color/design_default_color_on_primary"
+
+        />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/numOfEggs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="Num of Eggs"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textColorHint="@color/design_default_color_on_primary"/>
+
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sales.SalesFragment"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/text_view_outlook">
+
+        <RelativeLayout
+            android:id="@+id/sellsRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/text_view_outlook">
+
+            <EditText
+                android:id="@+id/inputDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_view_outlook"
+                android:hint="Date"
+                android:inputType="date"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary"
+                android:textColorHint="@color/design_default_color_primary_variant" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/calenderImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/inputDate"
+                android:layout_alignEnd="@id/inputDate"
+                android:layout_alignBottom="@id/inputDate"
+                android:scaleType="fitXY"
+                android:background="@drawable/text_view_outlook"
+                android:padding="3dp"
+                android:src="@drawable/ic_calender" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inputDate"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/traysSoldLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/inputDate"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/my_cards_outlook"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/traysSoldTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Trays"
+                        android:textAlignment="center"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/inputNumOfTrays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/text_view_outlook"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="@color/design_default_color_primary" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pricePerTrayLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/my_cards_outlook"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/pricePerTrayTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Price per Tray"
+                        android:textAlignment="center"
+                        android:textColor="@color/design_default_color_on_primary" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/inputPricePerTray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/text_view_outlook"
+                        android:inputType="number"
+                        android:textColor="@color/design_default_color_primary" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/totalPriceTextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/text_view_outlook"
+                android:padding="5dp"
+                android:text="Total Price: Tsh 00"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary" />
+
+            <LinearLayout
+                android:id="@+id/buyerDetailsLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalPriceTextview"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_view_outlook"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="BUYER DETAILS"
+                    android:textAlignment="center"
+                    android:textColor="@color/design_default_color_primary" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputBuyerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textColorHint="@color/design_default_color_primary" />
+                />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputBuyerContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textColorHint="@color/design_default_color_primary" />
+
+                android:hint="Phone"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputAmountPaid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount Paid"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textColorHint="@color/design_default_color_primary" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirmSellButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buyerDetailsLinearLayout"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_view_outlook_click_effect"
+                android:text="CONFIRM SELL"
+                android:textColor="@color/design_default_color_on_primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sellsRelativeLayout"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/text_view_outlook">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recentSalesTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:text="Recent Sales"
+                android:textColor="@color/design_default_color_primary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recentSalesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/viewAllSalesButton"
+                android:layout_below="@id/recentSalesTextView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/text_view_outlook"
+                android:layout_margin="5dp"
+                android:padding="5dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewAllSalesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/text_view_outlook_click_effect"
+                android:text="View all"
+                android:layout_margin="10dp"
+                android:textColor="@color/design_default_color_on_primary" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Home.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/text_view_outlook">
+
+        <RelativeLayout
+            android:id="@+id/inventoryStatusRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/text_view_outlook"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/inventoryStatusTextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:text="Inventory status:"
+                android:textColor="@color/design_default_color_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inventoryStatusTextview"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/numOfChickenTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/my_cards_outlook"
+                    android:text="CHICKEN\n\n00"
+                    android:textAlignment="center"
+                    android:textColor="@color/design_default_color_on_primary" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/numOfCagesTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/my_cards_outlook"
+                    android:text="CAGES\n\n00"
+                    android:textAlignment="center"
+                    android:textColor="@color/design_default_color_on_primary" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/numOfSacksTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/my_cards_outlook"
+                    android:text="SACKS OF\nFEEDS\n00"
+                    android:textAlignment="center"
+                    android:textColor="@color/design_default_color_on_primary" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/productionTrendsRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inventoryStatusRelativeLayout"
+            android:layout_margin="10dp"
+            android:background="@drawable/text_view_outlook"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/productionTrendTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:text="Production Trends:"
+                android:textColor="@color/design_default_color_primary" />
+
+            <LinearLayout
+                android:id="@+id/productiontrendsLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productionTrendTextView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/monthlytrendButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="MONTHLY"
+                    android:textColor="@color/design_default_color_on_primary"
+                    />
+
+                <!--<androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/quarterlyTrend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="YEAR\nQUATER"
+                    android:textColor="@color/design_default_color_on_primary" />
+-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/yearlyTrend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="YEARLY"
+                    android:textColor="@color/design_default_color_on_primary" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/customTimeSpanButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productiontrendsLinearLayout"
+                android:background="@drawable/small_buttons"
+                android:text="Custom Period"
+                android:textColor="@color/design_default_color_on_primary"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/salesRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/productionTrendsRelativeLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/text_view_outlook"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/salesAndMarketing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:text="Sales &amp; Marketing:"
+                android:textColor="@color/design_default_color_primary" />
+
+            <LinearLayout
+                android:id="@+id/salesLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/salesAndMarketing"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/monthlySales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_view_outlook_click_effect"
+                    android:text="MONTHLY"
+                    android:textColor="@color/design_default_color_on_primary" />
+
+                <!--<androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/quarterlySales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/text_view_outlook_click_effect"
+                    android:text="QUARTER"
+                    android:textColor="@color/design_default_color_on_primary" />
+-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/yearlySales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_view_outlook_click_effect"
+                    android:text="YEARLY"
+                    android:textColor="@color/design_default_color_on_primary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/salesLinearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_view_outlook"
+                android:padding="5dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/topCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="top\ncustomer"
+                    android:textColor="@color/design_default_color_on_primary" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/customerPayments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/my_cards_click_effect"
+                    android:text="customer\npayment\nbehaviour"
+                    android:textColor="@color/design_default_color_on_primary" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

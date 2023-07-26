@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/text_view_outlook"
+    android:fillViewport="true"
+    tools:context=".Home.QuarterProduction">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_view_outlook"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/selectYearTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Select Year and Quater"
+                android:textAlignment="center"
+                android:theme="@style/Theme.Material3.Light" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/selectYearSpinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectYearTitle"
+                android:layout_centerHorizontal="true"
+                android:entries="@array/anotherYears"
+                android:theme="@style/Theme.Material3.Light" />
+
+            <RadioGroup
+                android:id="@+id/selectQuaterRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectYearSpinner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:theme="@style/Theme.Material3.Light">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/quarter1Radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quarter 1" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/quarter2Radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quarter 2" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/quarter3Radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quarter 3" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plotButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectQuaterRadioGroup"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/text_view_outlook_click_effect"
+                android:text="plot"
+                android:theme="@style/Theme.Material3.Dark" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pichartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Pie Chart :"
+            android:theme="@style/Theme.Material3.Light" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/quarterProductionPieChart"
+            android:layout_width="match_parent"
+            android:layout_height="600dp" />
+
+        <TextView
+            android:id="@+id/barChartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Bar Chart :"
+            android:theme="@style/Theme.Material3.Light" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/quarterProductionBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="600dp" />
+
+
+        <TextView
+            android:id="@+id/lineChartTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Line Chart :"
+            android:theme="@style/Theme.Material3.Light" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/quarterProductionLineChart"
+            android:layout_width="match_parent"
+            android:layout_height="600dp" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
